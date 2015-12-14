@@ -13,7 +13,7 @@ module.exports = function (aws, options) {
   if (!options.delay) { options.delay = 0; }
 
   var client = knox.createClient(aws);
-  var regexGzip = /\.([a-z]{2,})\.gz$/i;
+  var regexGzip = /\.([a-z0-9]{2,})\.gz$/i;
   var regexGeneral = /\.([a-z]{2,})$/i;
   var files = [];
 
